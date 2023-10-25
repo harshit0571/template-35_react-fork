@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 export const Header = () => 
 {
-    const [show, setshow] = useState(true)
+    const [show, setshow] = useState(false)
   return (
     
         <header>
@@ -15,9 +15,9 @@ export const Header = () =>
                         <div class="underline"></div>
                     </div>
                 </div>
-                <div className='toggle' onClick={()=>(setshow(!show))}><i class="fa fa-bars" aria-hidden="true"></i>
+                <div class='toggle' onClick={()=>(setshow(!show))}><i class="fa fa-bars" aria-hidden="true"></i>
 </div>
-                <div class={show==true?"active-header":' links '} >
+                <div class={show==true?"active-header":' links '}  onClick={()=>(setshow(!show))} >
                     
                     <a href="/">Home.</a>
                     <a href="/about">About us.</a>
